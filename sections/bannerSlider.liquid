@@ -1,0 +1,421 @@
+ 
+<style>
+  
+.slideshow-container {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.slideshow-container .fade{
+  display: inline-block;
+}
+  .mySlides img{
+    width:100%;
+    max-width: 100%;
+  }
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 24px;
+    padding: 51px;
+    position: absolute;
+    top: 10%;
+    /* left: 3%; */
+    text-align: left;
+    max-width: 90%;
+    word-wrap: break-word;
+}
+.text h4 {
+  font-size: 78px;
+  line-height: 78px;
+  text-align: left;
+  margin: 0;
+  color: #ffffff;
+}
+  .text h3 {
+  font-size: 41px;
+  font-weight: 700;
+  line-height: 41px;
+  text-align: left;
+  margin: 0;
+  color: #ffffff;
+}
+  .text .para {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: #ffffff;
+  /* margin: 0; */
+}
+  
+.text .btn {
+  position: absolute;
+  top: 95%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  /* border-radius: 5px; */
+}
+.text .btn:hover {
+  background-color: #0e0e38;
+  color: #ffffff;
+  box-shadow: 0 4px 8px #0e0e38;
+}
+
+/* .text .btn:hover {
+  background-color: ffffff;
+  color: #000000;
+} */
+.dots {
+  position: absolute;
+  top: 94%;
+  width: 100%;
+  text-align: center;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: gray;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+      .dots {
+    position: absolute;
+    top: 90%;
+    width: 100%;
+    text-align: center;
+  }
+  .mySlides .text {
+    font-size: 18px;
+    padding: 11px;
+    top: 0%;
+    left: 3%;
+  }
+  .text .h4 {
+    font-size: 28px;
+    margin: 0;
+    line-height: normal;
+  }
+  .text h3 {
+    font-size: 20px;
+    margin: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+    .dots {
+    top: 90%;
+    }
+   .mySlides .text {
+    font-size: 20px;
+    padding: 30px;
+    top: 20%;
+    left: 3%;
+  }
+ .flex1-text {
+    text-align: center;
+  }
+  .text {
+    font-size: 18px;
+    padding: 30px;
+    top: -30px;
+    left: 3%;
+  }
+}
+
+@media  screen and (max-width: 480px) {
+    .mySlides .text {
+    font-size: 16px;
+    padding: 0;
+    top: 0%;
+    left: 2%;
+    text-align: center;
+  }
+.text h4 {
+    font-size: 24px;
+    line-height: normal;
+    }
+      .text h3 {
+        font-size: 16px;
+        margin: 0;
+       line-height: normal;
+    }
+  .text .para {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+  }
+     .mySlides .text .btn {
+        text-align: center;
+        position: absolute;
+        top: 124%;
+        left: 35% ;
+    }
+      .dots {
+        position: absolute;
+        top: 80%;
+      }
+}
+
+
+
+
+  
+</style>
+
+
+ <div class="slideshow-container">
+   
+      <div class="mySlides fade">
+        {% if section.settings.img_1 != blank %}
+        <img src="{{ section.settings.img_1 | img_url: 'master' }}" alt="Banner Image">
+         {% endif %}
+        <div class="page-width ">
+          <div class="rel_div">
+        <div class="text">
+          {% if section.settings.text_1 != blank %}
+          <p >{{ section.settings.text_1 }}</p>
+              {% endif %}
+          <!-- <h4>Beauty Essentials</h4> -->
+             {% if section.settings.column_richtext != blank %}
+          <p class="para">{{ section.settings.column_richtext }}</p>
+              {% endif %}
+           {% if section.settings.button_link != blank %}
+        <a href="{{ section.settings.button_link }}" > <button class="btn">{{ section.settings.button_label }}</button></a>
+             
+           {% endif %}
+             </div>
+          </div>
+        </div>
+      </div>
+
+ <div class="mySlides fade">
+        {% if section.settings.img_2 != blank %}
+        <img src="{{ section.settings.img_2 | img_url: 'master' }}" alt="Banner Image">
+         {% endif %}
+
+       <div class="page-width ">
+          <div class="rel_div">
+        <div class="text">
+          {% if section.settings.text_2 != blank %}
+          <p >{{ section.settings.text_2 }}</p>
+              {% endif %}
+          <!-- <h4>Beauty Essentials</h4> -->
+             {% if section.settings.column_richtext1 != blank %}
+          <p class="para">{{ section.settings.column_richtext1 }}</p>
+              {% endif %}
+           {% if section.settings.button_link1 != blank %}
+        <a href="{{ section.settings.button_link1 }}" > <button class="btn">{{ section.settings.button_label1 }}</button></a> 
+           {% endif %}
+             </div>
+          </div>
+       </div>
+      </div>
+
+   <div class="mySlides fade">
+        {% if section.settings.img_3 != blank %}
+        <img src="{{ section.settings.img_3 | img_url: 'master' }}" alt="Banner Image">
+         {% endif %}
+
+     <div class="page-width ">
+          <div class="rel_div">
+        <div class="text">
+          {% if section.settings.text_3 != blank %}
+          <p >{{ section.settings.text_3 }}</p>
+              {% endif %}
+          <!-- <h4>Beauty Essentials</h4> -->
+             {% if section.settings.column_richtext2 != blank %}
+          <p class="para">{{ section.settings.column_richtext2 }}</p>
+              {% endif %}
+           {% if section.settings.button_link2 != blank %}
+        <a href="{{ section.settings.button_link2 }}"  class="btn_link"> <button class="btn">{{ section.settings.button_label2 }}</button></a> 
+           {% endif %}
+             </div>
+          </div>
+     </div>
+      </div>
+
+       <!-- The dots/circles -->
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    </div>
+    <br />
+
+
+ <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+
+
+{% schema %}
+{
+  "name": "section2 banner slider",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "img_1",
+      "label": "Add image"
+    },
+    {
+      "type": "richtext",
+      "id": "text_1",
+      "label": "Heading text"
+    },
+    {
+      "type": "textarea",
+      "id": "column_richtext",
+      "label": "Add text"
+    },
+     {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+     {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Learn More"
+    },
+
+     {
+      "type": "image_picker",
+      "id": "img_2",
+      "label": "Product image"
+    },
+    {
+      "type": "richtext",
+      "id": "text_2",
+      "label": "Heading text"
+    },
+    {
+      "type": "textarea",
+      "id": "column_richtext1",
+      "label": "Add text"
+    },
+     {
+      "type": "url",
+      "id": "button_link1",
+      "label": "Button link"
+    },
+     {
+      "type": "text",
+      "id": "button_label1",
+      "label": "Button label",
+      "default": "Learn More"
+    },
+
+
+    {
+      "type": "image_picker",
+      "id": "img_3",
+      "label": "Add image"
+    },
+    {
+      "type": "richtext",
+      "id": "text_3",
+      "label": "Heading text"
+    },
+    {
+      "type": "textarea",
+      "id": "column_richtext2",
+      "label": "Add text"
+    },
+     {
+      "type": "url",
+      "id": "button_link2",
+      "label": "Button link"
+    },
+     {
+      "type": "text",
+      "id": "button_label2",
+      "label": "Button label",
+      "default": "Learn More"
+    },
+
+
+    
+  ],
+  "presets": [
+    {
+      "name": "Section2 Banner Slider"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+

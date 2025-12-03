@@ -1,0 +1,559 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Browse our latest products",
+            "heading_size": "h0"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "banner_slider_UWXEth": {
+      "type": "bannerSlider",
+      "settings": {
+        "img_1": "shopify://shop_images/Rectangle_15_1_3.png",
+        "text_1": "<h4>Luxurious</h4><h3>Beauty Essentials</h3>",
+        "column_richtext": "Beauty Products for a Glowing You",
+        "button_link": "#",
+        "button_label": "Shop Now",
+        "img_2": "shopify://shop_images/Rectangle_118_2.png",
+        "text_2": "<h4>Luxurious</h4><h3>Beauty Essentials</h3>",
+        "column_richtext1": "Beauty Products for a Glowing You",
+        "button_link1": "#",
+        "button_label1": "Shop Now",
+        "img_3": "shopify://shop_images/Rectangle_15_1_3.png",
+        "text_3": "<h4>Luxurious</h4><h3>Beauty Essentials</h3>",
+        "column_richtext2": "Beauty Products for a Glowing You",
+        "button_link2": "#",
+        "button_label2": "Shop Now"
+      }
+    },
+    "offer_section_QBjjBw": {
+      "type": "offerSection",
+      "settings": {
+        "text_offer": "First order is",
+        "percent_offer": "30%",
+        "button_link": "#",
+        "button_label": "shop now",
+        "img_1": "shopify://shop_images/Untitleddesign-2024-04-15T101813.727_563e92c6-c1f1-4566-b500-9004b2261c78.png",
+        "product1_link": "shopify://products/dry-yeast",
+        "product1_title": "Bob's Red Mill",
+        "product1_heading": "Bob's Red MilllBob's Red Mill Active Dry Yeast, Gluten Free, 8 Ounce",
+        "product1_price": "$5.29 USD",
+        "product1_stock": "In Stock",
+        "col1_link": "shopify://collections/health-grocery-1",
+        "col1_name": "Health Grocery",
+        "img_2": "shopify://shop_images/Untitleddesign_32_f5057906-3965-4415-bd15-ee96d6dd4067.png",
+        "product2_link": "shopify://products/ghee",
+        "product2_title": "4th & Heart",
+        "product2_heading": "4th & Heart Original Ghee Oil Cooking Spray, 5 Ounce",
+        "product2_price": "$19.29 USD   <s> $11.29 USD</s>",
+        "product2_stock": "In Stock",
+        "col2_link": "shopify://collections/health-grocery-1",
+        "col2_name": "Health Grocery"
+      }
+    },
+    "top_collections_Cnrgie": {
+      "type": "topCollections",
+      "blocks": {
+        "collection_block_C4rDJk": {
+          "type": "collection_block",
+          "settings": {
+            "collection1_link": "shopify://collections/health-wellness",
+            "collection1_name": "Health & Wellness",
+            "collection1_viewallink": "shopify://collections/health-wellness",
+            "collection1_viewall": "View all",
+            "product1_link": "shopify://products/absorbine",
+            "img_1": "shopify://shop_images/AbsorbineJr.PlusFastAbsorbingPainRelievingLiquid_4oz_2-Pack1_9aa63244-f39a-4a97-95c9-86790080aaac.png",
+            "product2_link": "shopify://products/advilpm",
+            "img_2": "shopify://shop_images/AdvilPM_20Count_PainRelieverNighttimeSleepAidCaplet_200mgIbuprofen_38mgDiphenhydramine1_1_19435a0c-8381-4157-8eb3-16114611bb57.png",
+            "product3_link": "shopify://products/zzzquilpurezzzs",
+            "img_3": "shopify://shop_images/ZzzQuilPUREZzzs_MelatoninSleepAidGummieswithLavender_ValerianRootandChamomile_NaturalWildberryVanillaFlavor_Non-HabitForming_Drug-Free_24Gummies3_1_4e9cec9a-5fe1-4100-a2ba-ee6132484bdf.png",
+            "product4_link": "shopify://products/childrens-motrin",
+            "img_4": "shopify://shop_images/ChildrenMotrinDye-FreePain_FeverReducerOriginalBerry4oz1_fc509854-7e0d-40cf-b6be-181a6313587f.png"
+          }
+        },
+        "collection_block_HGXXyK": {
+          "type": "collection_block",
+          "settings": {
+            "collection1_link": "shopify://collections/personal-care",
+            "collection1_name": "Personal Care",
+            "collection1_viewallink": "shopify://collections/personal-care",
+            "collection1_viewall": "View all",
+            "product1_link": "shopify://products/colgate",
+            "img_1": "shopify://shop_images/Untitleddesign_41_18a1dd92-5ed7-4997-ab54-fe541e43df72.png",
+            "product2_link": "shopify://products/canna-cell",
+            "img_2": "shopify://shop_images/Untitleddesign_261.png",
+            "product3_link": "shopify://products/hair-spritz",
+            "img_3": "shopify://shop_images/Untitleddesign_20_6db62258-9d22-4dc7-9887-3bf890ac3d8c.png",
+            "product4_link": "shopify://products/doedrant",
+            "img_4": "shopify://shop_images/Untitleddesign_38_3cb86c7b-98be-4580-8e30-7c30b1f9d17f.png"
+          }
+        },
+        "collection_block_94ULjM": {
+          "type": "collection_block",
+          "settings": {
+            "collection1_link": "shopify://collections/beauty",
+            "collection1_name": "Beauty",
+            "collection1_viewallink": "shopify://collections/beauty",
+            "collection1_viewall": "View all",
+            "product1_link": "shopify://products/gelly",
+            "img_1": "shopify://shop_images/Untitleddesign_43_1_e763157f-3505-4606-8b07-02fc545f3756.png",
+            "product2_link": "shopify://products/xlear-rescue",
+            "img_2": "shopify://shop_images/XlearNasalSpraywithXylitol_1.5floz2_1a69777f-d816-4ce8-9d33-5f22a1f462d7.png",
+            "product3_link": "shopify://products/rejuvenating-cream",
+            "img_3": "shopify://shop_images/Untitleddesign_56_5c0712eb-72be-4860-89c9-d6cd8f5d26c8.png",
+            "product4_link": "shopify://products/acure",
+            "img_4": "shopify://shop_images/Untitleddesign_28_1_ad5ba943-9fc0-4f83-b42a-f325612e6b94.png"
+          }
+        },
+        "collection_block_jpFWTR": {
+          "type": "collection_block",
+          "settings": {
+            "collection1_link": "shopify://collections/household-home",
+            "collection1_name": "Household Home",
+            "collection1_viewallink": "shopify://collections/household-home",
+            "collection1_viewall": "View all",
+            "product1_link": "shopify://products/goat-milk",
+            "img_1": "shopify://shop_images/Untitleddesign-2024-04-24T114424.529_91b65d52-7afa-463c-ba90-7c7534045487.png",
+            "product2_link": "shopify://products/brownie-mix",
+            "img_2": "shopify://shop_images/Untitleddesign-2024-04-25T130513.577_53b08ae4-2e05-4383-a2ab-e8957a496ff3.png",
+            "product3_link": "shopify://products/cacao-nibs",
+            "img_3": "shopify://shop_images/Untitleddesign-2024-04-25T131948.568_e9135b82-779f-4764-bbce-610a4065b418.png",
+            "product4_link": "shopify://products/10-grains-pancake-and-waffle-mix-1",
+            "img_4": "shopify://shop_images/Untitleddesign-2024-04-15T125400.946_bc616593-2204-4e38-acca-685adb0a1455.png"
+          }
+        },
+        "collection_block_8UgPwt": {
+          "type": "collection_block",
+          "settings": {
+            "collection1_link": "shopify://collections/health-grocery-1",
+            "collection1_name": "Health Grocery",
+            "collection1_viewallink": "shopify://collections/health-grocery-1",
+            "collection1_viewall": "View all",
+            "product1_link": "shopify://products/coca-powder",
+            "img_1": "shopify://shop_images/Untitleddesign-2024-04-18T081902.272_b598b13a-0e1c-4dc1-983c-6d9b0dc80cac.png",
+            "product2_link": "shopify://products/chia-seeds",
+            "img_2": "shopify://shop_images/Untitleddesign-2024-04-17T150528.055_e8be8501-bdcd-45de-97d2-88ab322eca76.png",
+            "product3_link": "shopify://products/baking-soda",
+            "img_3": "shopify://shop_images/Arm_HammerBakingSoda_4146f055-7958-4b86-8b9a-c2c3e8afb06d.png",
+            "product4_link": "shopify://products/chebe",
+            "img_4": "shopify://shop_images/Untitleddesign-2024-04-18T084341.143.png"
+          }
+        }
+      },
+      "block_order": [
+        "collection_block_C4rDJk",
+        "collection_block_HGXXyK",
+        "collection_block_94ULjM",
+        "collection_block_jpFWTR",
+        "collection_block_8UgPwt"
+      ],
+      "settings": {
+        "collection_heading": "Top Collections"
+      }
+    },
+    "explore_products_Mibfph": {
+      "type": "exploreProducts",
+      "blocks": {
+        "product_block_XgpCLq": {
+          "type": "product_block",
+          "settings": {
+            "product1_save": "Save$ 9.50 ",
+            "product1_img": "shopify://shop_images/Untitleddesign-2024-04-25T152329.694_82057253-4c59-466c-b56d-0e984781cd8d.png",
+            "product1_link": "shopify://products/short-brown-rice",
+            "product1_title": "Lundberg Family Farms Sprouted Short",
+            "product1_price": "$47.52 <s>$57.02</s>",
+            "product1_stock": "In Stock"
+          }
+        },
+        "product_block_XCNrBx": {
+          "type": "product_block",
+          "settings": {
+            "product1_save": "Save$ 8.45",
+            "product1_img": "shopify://shop_images/Untitleddesign-2024-04-24T150302.906_1_1_ae6bbf33-11ad-4b6b-bfb5-093452499822.png",
+            "product1_link": "shopify://products/chocolate-chip",
+            "product1_title": "Miss Jones Chocolate Chip\nCookie Mix, 13 oz....",
+            "product1_price": "$42.24 <s>$50.69</s>",
+            "product1_stock": "In Stock"
+          }
+        },
+        "product_block_UzpnRn": {
+          "type": "product_block",
+          "settings": {
+            "product1_save": "Save$ 13.29",
+            "product1_img": "shopify://shop_images/Untitleddesign-2024-04-25T131948.568_e9135b82-779f-4764-bbce-610a4065b418.png",
+            "product1_link": "shopify://products/cacao-nibs",
+            "product1_title": "Natierra Himalania Organic Cacao Nibs Pouch......  $79.72",
+            "product1_price": "$66.43<s> $79.72</s>",
+            "product1_stock": "In Stock"
+          }
+        },
+        "product_block_cTFCk4": {
+          "type": "product_block",
+          "settings": {
+            "product1_save": "Save$ 9.66",
+            "product1_img": "shopify://shop_images/Untitleddesign-2024-04-25T130513.577_53b08ae4-2e05-4383-a2ab-e8957a496ff3.png",
+            "product1_link": "shopify://products/brownie-mix",
+            "product1_title": "Namaste Foods Gluten Free Brownie Mix...",
+            "product1_price": "$48.29<s>$57.95</s>",
+            "product1_stock": "In Stock"
+          }
+        },
+        "product_block_bhQ7eM": {
+          "type": "product_block",
+          "settings": {
+            "product1_save": "Save$ 9.50 ",
+            "product1_img": "shopify://shop_images/Untitleddesign-2024-04-18T081902.272_b598b13a-0e1c-4dc1-983c-6d9b0dc80cac.png",
+            "product1_link": "shopify://products/coca-powder",
+            "product1_title": "Lundberg Family Coca Powder",
+            "product1_price": "$47.52 <s>$57.02</s>",
+            "product1_stock": "In Stock"
+          }
+        }
+      },
+      "block_order": [
+        "product_block_XgpCLq",
+        "product_block_XCNrBx",
+        "product_block_UzpnRn",
+        "product_block_cTFCk4",
+        "product_block_bhQ7eM"
+      ],
+      "settings": {
+        "text_heading": "What's Hot",
+        "text_content": "Explore our new range of unique products. our top product",
+        "button_link": "#",
+        "button_label": "shop now",
+        "img_1": "shopify://shop_images/Rectangle_60_2.png"
+      }
+    },
+    "shop_brands_Axcc38": {
+      "type": "shopBrands",
+      "settings": {
+        "shop_heading": "Shop by Brand",
+        "img_1": "shopify://shop_images/1787_28cf42540b07834dde5486560b4ae3aa_1.png",
+        "img_2": "shopify://shop_images/514_0b88ff9ed499f123523eddc58c22c5e3.png",
+        "img_3": "shopify://shop_images/240_66ec9891bf92e1ee46d1a975c53f02b3_2.png",
+        "img_4": "shopify://shop_images/1111_9b4ecc6e2f6d409e2df8530ddf49c256_1.png",
+        "img_5": "shopify://shop_images/epic-bar-logo_1.png"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "build_order_wKyU8z": {
+      "type": "buildOrder",
+      "settings": {
+        "build_heading": "Let us help you shop",
+        "build_text": "Use our guided shopping experience to build your order.",
+        "build_link": "#",
+        "link_text": "Build your order"
+      }
+    },
+    "shop_step_cards_TQt49A": {
+      "type": "shopStepCards",
+      "blocks": {
+        "card_block_LTMbcf": {
+          "type": "card_block",
+          "settings": {
+            "img_1": "shopify://shop_images/Vector_9.png",
+            "card1_heading": "Discover the best",
+            "card1_text": "Save up to 30% on organic and sustainable products curated for members"
+          }
+        },
+        "card_block_wLRraR": {
+          "type": "card_block",
+          "settings": {
+            "img_1": "shopify://shop_images/Vector_10.png",
+            "card1_heading": "Save time & money",
+            "card1_text": "Get extra savings when you put your favorites on recurring deliveries with Autoship"
+          }
+        },
+        "card_block_DrewAE": {
+          "type": "card_block",
+          "settings": {
+            "img_1": "shopify://shop_images/Vector_11.png",
+            "card1_heading": "You’re in control",
+            "card1_text": "Easily skip or pause Autoship deliveries, and place one-time orders when you need them"
+          }
+        }
+      },
+      "block_order": [
+        "card_block_LTMbcf",
+        "card_block_wLRraR",
+        "card_block_DrewAE"
+      ],
+      "settings": {
+        "section_heading": "3 Easy step to shop"
+      }
+    },
+    "featured_product_geYFah": {
+      "type": "featuredProduct",
+      "blocks": {
+        "card_block_GLdcUN": {
+          "type": "card_block",
+          "settings": {
+            "img_1": "shopify://shop_images/AdvilPM_20Count_PainRelieverNighttimeSleepAidCaplet_200mgIbuprofen_38mgDiphenhydramine1_1.png",
+            "product1_heading": "Advil PM (20 Count) Pain Reliever / Nighttime Sleep Aid Caplet..",
+            "product1_price": "$5.39",
+            "product1_stock": "In Stock",
+            "pro1_link": "shopify://products/advilpm",
+            "img_2": "shopify://shop_images/XlearRescueXylitolandSalineNasalSpraywithEssentialOils_1.5flozMeteredDose3_1.png",
+            "product2_heading": "Xlear Nasal Spray with Xylitol, 1.5 fl oz",
+            "product2_price": "$10.70",
+            "product2_stock": "In Stock",
+            "pro2_link": "shopify://products/xlear-rescue",
+            "img_3": "shopify://shop_images/ChildrenMotrinDye-FreePain_FeverReducerOriginalBerry4oz1_fc509854-7e0d-40cf-b6be-181a6313587f.png",
+            "product3_heading": "Children Motrin Dye- Free Pain & Fever...",
+            "product3_price": "$8.81",
+            "product3_stock": "In Stock",
+            "pro3_link": "shopify://products/childrens-motrin"
+          }
+        },
+        "card_block_qDMqgF": {
+          "type": "card_block",
+          "settings": {
+            "img_1": "shopify://shop_images/ZzzQuilPUREZzzs_MelatoninSleepAidGummieswithLavender_ValerianRootandChamomile_NaturalWildberryVanillaFlavor_Non-HabitForming_Drug-Free_24Gummies3_519f3e2b-576d-4255-8c69-f61b81732a45.png",
+            "product1_heading": "ZzzQuil PURE Zzzs, Melatonin Sleep Aid Gummies with Lavender....",
+            "product1_price": "$8.30",
+            "product1_stock": "In Stock",
+            "pro1_link": "shopify://products/zzzquilpurezzzs",
+            "img_2": "shopify://shop_images/Untitleddesign-2024-04-18T084341.143_79d82f63-a0c3-40e2-a6a1-6442b142783c.png",
+            "product2_heading": "Chebe Bread Original Cheese Bread Mix..",
+            "product2_price": "$45.82 <s>$54.99</s>",
+            "product2_stock": "In Stock",
+            "pro2_link": "shopify://products/chebe",
+            "img_3": "shopify://shop_images/Arm_HammerBakingSoda_4146f055-7958-4b86-8b9a-c2c3e8afb06d.png",
+            "product3_heading": "Arm & hammer baking soda, 1 lb",
+            "product3_price": "$3.99",
+            "product3_stock": "In Stock",
+            "pro3_link": "shopify://products/baking-soda"
+          }
+        },
+        "card_block_DkU6kr": {
+          "type": "card_block",
+          "settings": {
+            "img_1": "shopify://shop_images/Untitleddesign-2024-04-15T101813.727_563e92c6-c1f1-4566-b500-9004b2261c78.png",
+            "product1_heading": "Advil PM (20 Count) Pain Reliever / Nighttime Sleep Aid Caplet..",
+            "product1_price": "$5.39",
+            "product1_stock": "In Stock",
+            "pro1_link": "shopify://products/dry-yeast",
+            "img_2": "shopify://shop_images/Untitleddesign-2024-04-24T150302.906_1_1_ae6bbf33-11ad-4b6b-bfb5-093452499822.png",
+            "product2_heading": "Xlear Nasal Spray with Xylitol, 1.5 fl oz",
+            "product2_price": "$10.70",
+            "product2_stock": "In Stock",
+            "pro2_link": "shopify://products/chocolate-chip",
+            "img_3": "shopify://shop_images/Untitleddesign-2024-04-25T130513.577_53b08ae4-2e05-4383-a2ab-e8957a496ff3.png",
+            "product3_heading": "Children Motrin Dye- Free Pain & Fever...",
+            "product3_price": "$8.81",
+            "product3_stock": "In Stock",
+            "pro3_link": "shopify://products/brownie-mix"
+          }
+        }
+      },
+      "block_order": [
+        "card_block_GLdcUN",
+        "card_block_qDMqgF",
+        "card_block_DkU6kr"
+      ],
+      "settings": {
+        "section_heading": "Featured product"
+      }
+    },
+    "image_banner_jUPfzJ": {
+      "type": "image-banner",
+      "blocks": {
+        "text_x8PTgD": {
+          "type": "text",
+          "settings": {
+            "text": "Your Budget-Friendly",
+            "text_style": "body"
+          }
+        },
+        "heading_GRbHGH": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Grocery Spot</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "buttons_Vwge8y": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop now",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_x8PTgD",
+        "heading_GRbHGH",
+        "buttons_Vwge8y"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Rectangle_118_2.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-right",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "testimonials_BVhhyH": {
+      "type": "testimonials",
+      "blocks": {
+        "card_block_gcpPNE": {
+          "type": "card_block",
+          "settings": {
+            "test1_para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus optio facilis beatae.\n                  <br><br> Thank You",
+            "img_1": "shopify://shop_images/Group_101.png",
+            "test1_name": "John Doe",
+            "test1_post": "Manager"
+          }
+        },
+        "card_block_e9z7NU": {
+          "type": "card_block",
+          "settings": {
+            "test1_para": "Delivery is excellent and the prices seem reasonable.<br> <br>\n Thank you!",
+            "img_1": "shopify://shop_images/Group_15.png",
+            "test1_name": "Jim",
+            "test1_post": "12/10/24"
+          }
+        },
+        "card_block_FFjGgY": {
+          "type": "card_block",
+          "settings": {
+            "test1_para": "Delivery is excellent and the prices seem reasonable.    <br> <br> Thank you!",
+            "img_1": "shopify://shop_images/Group_100.png",
+            "test1_name": "John",
+            "test1_post": "Co-founder"
+          }
+        },
+        "card_block_ngTC7c": {
+          "type": "card_block",
+          "settings": {
+            "test1_para": "Delivery is excellent and the prices seem reasonable.   <br>  <br>Thank you!",
+            "img_1": "shopify://shop_images/Group_15.png",
+            "test1_name": "Mary",
+            "test1_post": "Founder"
+          }
+        }
+      },
+      "block_order": [
+        "card_block_gcpPNE",
+        "card_block_e9z7NU",
+        "card_block_FFjGgY",
+        "card_block_ngTC7c"
+      ],
+      "settings": {
+        "section_heading": "What Our Users Say"
+      }
+    },
+    "fast_ship_ngiG6r": {
+      "type": "fastShip",
+      "settings": {
+        "img_1": "shopify://shop_images/delivery-truck_1.jpg",
+        "card1_heading": "Fast shipping",
+        "img_2": "shopify://shop_images/exchange_2_1.png",
+        "card2_heading": "Easy Return",
+        "img_3": "shopify://shop_images/071-credit-card_1.png",
+        "card3_heading": "Secure Payment",
+        "img_4": "shopify://shop_images/warranty_1_1.png",
+        "card4_heading": "Assured Quality",
+        "img_5": "shopify://shop_images/091-dollar_1.png",
+        "card5_heading": "Best Price"
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "banner_slider_UWXEth",
+    "offer_section_QBjjBw",
+    "top_collections_Cnrgie",
+    "explore_products_Mibfph",
+    "shop_brands_Axcc38",
+    "featured_collection",
+    "build_order_wKyU8z",
+    "shop_step_cards_TQt49A",
+    "featured_product_geYFah",
+    "image_banner_jUPfzJ",
+    "testimonials_BVhhyH",
+    "fast_ship_ngiG6r"
+  ]
+}

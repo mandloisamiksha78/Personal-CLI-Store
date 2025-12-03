@@ -1,0 +1,480 @@
+<style>
+    .pading-main {
+  padding: 0 5rem;
+}
+   .fifty-margin {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+ .top-margin {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.top-head {
+  text-align: center;
+}
+/* featured products section10 */
+.featured-div {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.half-featured {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+}
+.featured-left {
+  flex: 50%;
+  text-align: center;
+  border: 1px solid lightgray;
+}
+.featured-right {
+  flex: 50%;
+  text-align: center;
+}
+.wrapper {
+  /* width: 100%; */
+  max-width: 100%;
+  display: grid;
+  max-width: 100%;
+  margin: auto;
+  height: 100%;
+  border: 1px solid lightgray;
+}
+.wrapper-top {
+  max-width: 100%;
+  display: flex;
+  /* flex-wrap: wrap; */
+      height: 100%;
+
+  border-bottom: 1px solid lightgray;
+}
+  .wrapper-half{
+     flex: 50%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  }
+.wrapper-half2 {
+  flex: 50%;
+  margin: auto;
+  text-align: left;
+   /* height: 7vw; */
+}
+.mg0 {
+  margin-bottom: 0;
+}
+
+.center-immg {
+  text-align: center;
+}
+.space30 {
+  padding: 30px;
+}
+span.spanleft {
+  position: absolute;
+  margin-top: -63px;
+  margin-left: -54px;
+}
+span.spanright {
+  position: absolute;
+  margin-left: 316px;
+  margin-top: -25px;
+}
+.product_link{
+  text-decoration:none;
+}
+.text1-div h5 {
+  font-size: 15px;
+  font-weight: 700;
+}
+.dollar s {
+  margin: 0;
+}
+.instock-div ul {
+  float: left;
+  padding: 0;
+  padding-left: 15px;
+}
+.instock-div li {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+  .flex1-img {
+  max-width: 100%;
+    text-align: center;
+  }
+.slick-prev {
+    left: -19px;
+}
+
+.space30{
+     border-bottom: none;
+}
+.spaceleft{
+  margin: auto;
+}
+  .mtm{
+    margin-top:35px;
+  }
+
+@media (min-width: 768px) and (max-width: 1200px) {
+.space30{
+  height: 100%;
+}
+  .mtm{
+    margin-top:0;
+  }
+} 
+  
+@media screen and (max-width: 768px) {
+
+ .featured-div {
+  flex-direction: column;
+    margin: auto;
+  }
+  .featured-right {
+  display: flex;
+        width: 100%;
+        max-width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+  }
+  .wrapper{
+        display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+  }
+   .wrapper-top {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+     height: auto;
+  }
+  .wrapper-half{
+    height: unset;
+  }
+   .wrapper-half img {
+    height: unset;
+  }
+   .wrapper-half2 img {
+    height: unset;
+  }
+  .flex1-img img {
+    height: auto;
+    max-width: 100%;
+  }
+    .wrapper-top {
+        flex-direction: column;
+        padding: 20px;
+    }
+.instock-div{
+  margin-top: 0;
+}
+  .rflex1{
+    height: 100%;
+  }
+  .space30{
+  height: 100%;
+}
+  .spaceleft {
+  padding-left: 0;
+}
+  .space30{
+    /* padding: 0; */
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+.slick-initialized .slick-slide {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+
+}
+
+  
+
+</style>
+
+
+
+
+    <div class="page-width fifty-margin">
+          {% if section.settings.section_heading != blank %}
+      <h1 class="top-head top-margin"> {{ section.settings.section_heading }}</h1>
+               {% endif %}
+      <div class="featured-div multiple-items">
+
+       {% for block in section.blocks %}   
+        
+        <div class="half-featured">
+           {% if block.settings.pro1_link != blank %}
+          
+          <div class="featured-left">
+            <a href="  {{ block.settings.pro1_link }}" class="product_link">
+            <div class="rflex1 space30">
+              <div class="flex1-img">
+               {% if block.settings.img_1 != blank %}
+        <img src="{{ block.settings.img_1 | img_url: 'master' }}" alt="card Image">
+         {% endif %}
+              </div>
+              <span class="spanleft" >
+                <img src="./images/Group 151.png" alt="">
+              </span>
+              <div class="flex1-text spaceleft">
+                <div class="text1-div">
+                    {% if block.settings.product1_heading != blank %}
+                  <h5 class="text1-content">
+                  {{ block.settings.product1_heading }}
+                  </h5>
+                     {% endif %}
+                    {% if block.settings.product1_price != blank %}
+                  <h5 class="dollar mg0">    {{ block.settings.product1_price }}</h5>
+                     {% endif %}
+                  
+                </div>
+                <div class="instock-div mtm">
+                  <ul>
+                    {% if block.settings.product1_stock != blank %}                    
+                    <li>   {{ block.settings.product1_stock }}</li>
+                            {% endif %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+                </a>
+          </div>
+             {% endif %}
+      
+          <div class="featured-right">
+            <div class="wrapper">
+            {% if block.settings.pro2_link != blank %}
+          <a href="  {{ block.settings.pro2_link }}" class="product_link">   
+              <div class="wrapper-top">
+                <div class="wrapper-half">
+                {% if block.settings.img_2 != blank %}
+        <img src="{{ block.settings.img_2 | img_url: 'master' }}" alt="card Image">
+         {% endif %}
+                </div>
+
+                <div class="wrapper-half2">
+                  <div class="text1-div">
+                      {% if block.settings.product2_heading != blank %}
+                    <h5 class="text1-content">
+                      {{ block.settings.product2_heading }}
+                    </h5>
+                           {% endif %}
+                   {% if block.settings.product2_price != blank %}
+                  <h5 class="dollar mg0">    {{ block.settings.product2_price }}</h5>
+                     {% endif %}
+                  </div>
+                  <div class="instock-div mtm">
+                    <ul>
+                     {% if block.settings.product2_stock != blank %}                    
+                    <li>   {{ block.settings.product2_stock }}</li>
+                            {% endif %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </a>
+{% endif %}
+            
+               {% if block.settings.pro3_link != blank %}
+          <a href="  {{ block.settings.pro3_link }}" class="product_link">
+              <div class="wrapper-top">
+                <div class="wrapper-half">
+               {% if block.settings.img_3 != blank %}
+        <img src="{{ block.settings.img_3 | img_url: 'master' }}" alt="card Image">
+         {% endif %}
+                </div>
+                <div class="wrapper-half2">
+                  <div class="text1-div">
+                    
+  {% if block.settings.product3_heading != blank %}
+    
+                    <h5 class="text1-content">
+                      {{ block.settings.product3_heading }}
+                    </h5>
+                           {% endif %}
+                   {% if block.settings.product3_price != blank %}
+                  <h5 class="dollar mg0">    {{ block.settings.product3_price }}</h5>
+                     {% endif %}
+                  </div>
+                  <div class="instock-div mtm">
+                    <ul>
+                     {% if block.settings.product3_stock != blank %}                    
+                    <li>   {{ block.settings.product3_stock }}</li>
+                            {% endif %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+                </a>
+{% endif %}
+            </div>
+          </div>
+        </div>
+   {% endfor %}
+
+         
+      
+      </div>
+    </div>
+
+
+
+<script>
+$(document).ready(function() {
+  $('.multiple-items').slick({
+    slidesToShow: 2, 
+    slidesToScroll: 1,
+    infinite: false,
+    arrows: true, 
+    dots: false, 
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2, 
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1, 
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  });
+});
+</script>
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Featured product Section",
+    "settings": [
+      {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading"
+    },
+    ],
+    "blocks": [
+    {
+      "type": "card_block",
+      "name": "Add product",
+      "settings": [
+      {
+          "type": "image_picker",
+          "id": "img_1",
+          "label": "Product 1 Image"
+        },
+         {
+          "type": "textarea",
+          "id": "product1_heading",
+          "label": "Product1 heading"
+        },
+        {
+          "type": "textarea",
+          "id": "product1_price",
+          "label": "product price"
+        },
+         {
+          "type": "text",
+          "id": "product1_stock",
+          "label": "product stock"
+        },
+        {
+          "type": "url",
+          "id": "pro1_link",
+          "label": "Product1 link"
+        },
+         {
+          "type": "image_picker",
+          "id": "img_2",
+          "label": "Product 2 Image"
+        },
+           {
+          "type": "textarea",
+          "id": "product2_heading",
+          "label": "Product  heading"
+        },
+        {
+          "type": "textarea",
+          "id": "product2_price",
+          "label": "product price"
+        },
+         {
+          "type": "text",
+          "id": "product2_stock",
+          "label": "product stock"
+        },
+         {
+          "type": "url",
+          "id": "pro2_link",
+          "label": "Product2 link"
+        },
+
+         {
+          "type": "image_picker",
+          "id": "img_3",
+          "label": "Product  Image"
+        },
+           {
+          "type": "textarea",
+          "id": "product3_heading",
+          "label": "Product  heading"
+        },
+        {
+          "type": "textarea",
+          "id": "product3_price",
+          "label": "product price"
+        },
+         {
+          "type": "text",
+          "id": "product3_stock",
+          "label": "product stock"
+        },
+      {
+          "type": "url",
+          "id": "pro3_link",
+          "label": "Product3 link"
+        },
+        
+        ]
+    }
+  ], 
+ "presets": [
+    {
+      "name": "Featured product Section"
+     
+     
+    }
+  ]
+  }
+{% endschema %}

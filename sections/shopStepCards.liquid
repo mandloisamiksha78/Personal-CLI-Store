@@ -1,0 +1,153 @@
+<style>
+   .pading-main {
+  padding: 0 5rem;
+}
+  .top-margin {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.top-head {
+  text-align: center;
+}
+/* Step to shop section9  */
+.three-cards {
+  /* width: 100%; */
+  max-width: 100%;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+  margin: auto;
+}
+.card-holder {
+  flex: 30%;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  display: inline-block;
+  text-align: center;
+  padding: 35px;
+  background-color: #2b65cf14;
+}
+.card-holder img {
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card-holder h3 {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 0;
+}
+.card-holder p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: center;
+  color: gray;
+}
+
+
+@media screen and (max-width: 768px) {
+ /* section9 */
+  .three-cards {
+  flex-wrap:wrap;
+    gap: 10px;
+  }
+  .custom-model-main:before {
+    content: "";
+    display: inline-block;
+    height: auto;
+    vertical-align: middle;
+    margin-right: -0px;
+    height: 100%;
+  }
+  .custom-model-inner {
+    margin-top: 45px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .three-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+  
+
+  
+</style>
+
+ <!-- Step to shop section9 -->
+    <div class="page-width top-margin">
+     {% if section.settings.section_heading != blank %}
+      <h1 class="top-head">{{ section.settings.section_heading }}</h1>
+        {% endif %}
+      <div class="three-cards pading-main">
+
+          {% for block in section.blocks %}      
+        <div class="card-holder">
+     {% if block.settings.img_1 != blank %}
+        <img src="{{ block.settings.img_1 | img_url: 'master' }}" alt="card Image">
+         {% endif %}
+            {% if block.settings.card1_heading != blank %}
+          <h3>{{ block.settings.card1_heading }}</h3>
+                   {% endif %}
+          <img src="https://cdn.shopify.com/s/files/1/0730/1428/0429/files/Vector_33_Stroke.png?v=1734525029" alt="" >
+            {% if block.settings.card1_text != blank %}
+          <p> {{ block.settings.card1_text }} </p>
+                 {% endif %}
+        </div>
+               {% endfor %}
+
+       
+      </div>
+    </div>
+
+
+
+{% schema %}
+  {
+    "name": "Steps to shop",
+    "settings": [
+       {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading"
+    },
+    ],
+    "blocks": [
+    {
+      "type": "card_block",
+      "name": "Add Text and Image",
+      "settings": [
+      {
+          "type": "image_picker",
+          "id": "img_1",
+          "label": "Card 1 Image"
+        }, {
+          "type": "text",
+          "id": "card1_heading",
+          "label": "Card heading"
+        },
+         {
+          "type": "textarea",
+          "id": "card1_text",
+          "label": "Card text"
+        },
+          ]
+    }
+  ],
+    "presets": [
+    {
+      "name": "Steps to shop"
+     
+     
+    }
+  ]
+  }
+{% endschema %}

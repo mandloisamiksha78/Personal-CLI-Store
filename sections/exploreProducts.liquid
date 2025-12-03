@@ -1,0 +1,358 @@
+<style>
+.pading-main {
+  padding: 0 5rem;
+}
+  .top-head {
+  text-align: center;
+}
+.whats-main {
+  width: 100%;
+  max-width: 100%;
+  background-color: #2b65cf;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 5px; */
+  padding-right: 0;
+  flex-wrap: nowrap;
+}
+.sec6-left {
+  flex: 1 1 30%;
+  text-align: center;
+  color: #ffffff;
+  padding: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.sec6-text h2 {
+  font-size: 33px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+.sec6-text p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0 25px;
+  opacity: 0.9;
+}
+.sec6-text .btn {
+  background-color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.sec6-text .btn:hover {
+  background-color: #0e0e38;
+  color: #ffffff;
+  box-shadow: 0 4px 8px #0e0e38;
+}
+.sec6-right {
+  flex: 1 1 70%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  /* padding: 10px; */
+}
+.slider {
+  display: flex;
+  gap: 15px;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.rflex1 {
+  flex: 0 0 calc(25% - 15px);
+  background-color: #ffffff;
+  border: 1px solid lightgray;
+  text-align: left;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: normal;
+  /* height: 29vw; */
+}
+.rflex1 img {
+  width: auto;
+  max-width: 100%;
+  height: 150px; /* Ensures consistent image size */
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+span.offer {
+  display: inline-block;
+  background-color: #ee0000;
+  color: #ffffff;
+  padding: 5px;
+  /* margin-bottom: 10px; */
+}
+.flex1-text h5 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+.flex1-text .dollar {
+  color: #333;
+}
+.instock-div {
+  color: #428053;
+  font-weight: 700;
+  font-size: 15px;
+}
+.slick-initialized .slick-slide {
+    display: flex;
+}
+ .flex1-img a{
+   text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.flex1-text {
+    /* margin: auto; */
+}
+  .flex1-text .dollar {
+    color: #333;
+    margin-top: 15px;
+}
+ .rflex1 .flex1-img{
+    text-align: justify;
+  }
+ .instock-div {
+    color: #428053;
+    font-weight: 700;
+    font-size: 15px;
+    /* margin-top: 35px; */
+    text-align: left;
+    float: left;
+  }
+ .instock-div ul{
+      padding-left: 15px;
+  
+   }
+ .slick-next {
+    right: -2px;
+} 
+.slick-prev, .slick-next{
+      /* background: gray; */
+    border-radius: 50%;
+}
+
+.slick-prev:before, .slick-next:before{
+      color: lightgrey;
+    background-color: transparent;
+}
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+    opacity: unset;
+}
+.sec6-img img{
+  max-width: 100%;
+} 
+
+  
+  @media screen and (max-width: 768px) {
+  .whats-main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sec6-right {
+    padding: 0;
+  }
+  .slider {
+    flex-wrap: wrap;
+  }
+  .rflex1 {
+    flex: 0 0 calc(50% - 10px);
+  }
+}
+
+
+@media (max-width: 480px) {
+.right-text{
+  width: 100%;
+  max-width: 100%;
+}
+
+
+}
+
+
+
+
+
+  
+</style>
+
+<div class="page-width fifty-margin">
+  <div class="whats-main">
+    <div class="sec6-left">
+      <div class="sec6-text">
+        {% if section.settings.text_heading != blank %}
+          <h2>{{ section.settings.text_heading }}</h2>
+        {% endif %}
+        {% if section.settings.text_content != blank %}
+          <p>{{ section.settings.text_content }}</p>
+        {% endif %}
+        {% if section.settings.button_link != blank %}
+          <a href="{{ section.settings.button_link }}">
+            <button class="btn">{{ section.settings.button_label }}</button>
+          </a>
+        {% endif %}
+         <div class="sec6-img">
+                {% if section.settings.img_1 != blank %}
+          <img  src="{{ section.settings.img_1 | img_url: 'master' }}"  alt="image">
+              {% endif %}
+          </div>
+      </div>
+    </div>
+    <div class="sec6-right slider">
+      {% for block in section.blocks %}
+        <div class="rflex1">
+          <div class="flex1-img">
+            {% if block.settings.product1_save != blank %}
+              <span class="offer">{{ block.settings.product1_save }}</span>
+            {% endif %}
+            {% if block.settings.product1_img != blank %}
+              <a href="{{ block.settings.product1_link }}">
+                <img src="{{ block.settings.product1_img | img_url: 'master' }}" alt="Product Image">
+              </a>
+            {% endif %}
+          </div>
+          <div class="flex1-text">
+            {% if block.settings.product1_title != blank %}
+              <h5>{{ block.settings.product1_title }}</h5>
+            {% endif %}
+            {% if block.settings.product1_price != blank %}
+              <h5 class="dollar">{{ block.settings.product1_price }}</h5>
+            {% endif %}
+            <div class="instock-div">
+            {% if block.settings.product1_stock != blank %}
+              <ul>
+                <li>{{ block.settings.product1_stock }}</li>
+              </ul>
+            {% endif %}
+          </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function() {
+  $('.slider').slick({
+    slidesToShow: 4, 
+    slidesToScroll: 1,
+    infinite: false,
+    arrows: true, 
+    dots: false, 
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3, 
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2, 
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  });
+});
+</script>
+
+
+
+{% schema %}
+{
+  "name": "Explore products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text_heading",
+      "label": "Heading Text"
+    },
+    {
+      "type": "textarea",
+      "id": "text_content",
+      "label": "Content Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label"
+    },
+     {
+      "type": "image_picker",
+      "id": "img_1",
+      "label": "Product Image 1"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "product_block",
+      "name": "Add Product",
+      "settings": [
+        {
+          "type": "text",
+          "id": "product1_save",
+          "label": "Save Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "product1_img",
+          "label": "Product Image"
+        },
+        {
+          "type": "url",
+          "id": "product1_link",
+          "label": "Product Link"
+        },
+        {
+          "type": "textarea",
+          "id": "product1_title",
+          "label": "Product Title"
+        },
+        {
+          "type": "textarea",
+          "id": "product1_price",
+          "label": "Product Price"
+        },
+        {
+          "type": "text",
+          "id": "product1_stock",
+          "label": "Stock Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Explore products"
+    }
+  ]
+}
+{% endschema %}
+

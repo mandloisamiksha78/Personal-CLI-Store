@@ -1,0 +1,122 @@
+<style>
+ .pading-main {
+  padding: 0 5rem;
+}
+.top-head {
+  text-align: center;
+}
+
+.shopby-div {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.brand-div {
+  flex: 25%;
+  padding: 20px;
+  border: 1px solid lightgray;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+span.arrow {
+  position: absolute;
+  margin-top: 143px;
+  margin-left: 37px;
+}
+
+
+@media (max-width: 768px) {
+  .shopby-div {
+    flex-wrap: wrap;
+  }
+}
+
+</style>
+
+
+  <div class="page-width top-margin">
+     {% if section.settings.shop_heading != blank %}
+      <h1 class="top-head">{{ section.settings.shop_heading }}</h1>
+        {% endif %}
+      <div class="shopby-div">
+        <div class="brand-div">
+            {% if section.settings.img_1 != blank %}
+          <img  src="{{ section.settings.img_1 | img_url: 'master' }}" alt="">
+        {% endif %}
+              </div>
+        <div class="brand-div">
+       {% if section.settings.img_2 != blank %}
+          <img  src="{{ section.settings.img_2 | img_url: 'master' }}" alt="">
+        {% endif %}
+        </div>
+        <div class="brand-div">
+       {% if section.settings.img_3 != blank %}
+          <img  src="{{ section.settings.img_3 | img_url: 'master' }}" alt="">
+        {% endif %}
+        </div>
+        <div class="brand-div">
+      {% if section.settings.img_4 != blank %}
+          <img  src="{{ section.settings.img_4 | img_url: 'master' }}" alt="">
+        {% endif %}
+        </div>
+        <div class="brand-div">
+       {% if section.settings.img_5 != blank %}
+          <img  src="{{ section.settings.img_5 | img_url: 'master' }}" alt="">
+        {% endif %}
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Shop brands",
+    "settings": [
+       {
+      "type": "text",
+      "id": "shop_heading",
+      "label": "Section Heading"
+    },
+        {
+          "type": "image_picker",
+          "id": "img_1",
+          "label": "Brand 1 Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_2",
+          "label": "Brand 2 Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_3",
+          "label": "Brand 3 Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_4",
+          "label": "Brand 4 Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_5",
+          "label": "Brand 5 Image"
+        },
+    ],
+  "presets": [
+    {
+      "name": "Shop brands"
+    }
+  ]
+}
+{% endschema %}

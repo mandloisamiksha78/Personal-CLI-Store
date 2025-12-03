@@ -1,0 +1,236 @@
+<style>
+
+
+.top-margin {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.top-head {
+  text-align: center;
+  font-weight: 700;
+}
+.all-collections {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.collection1 {
+  flex: 15%;
+  align-items: center;
+  text-align: center;
+  background-color: lightgray;
+  padding: 5px;
+}
+.coll-head {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.coll-head h6 {
+  font-size: 15px;
+  font-weight: 700;
+}
+.head-right {
+  color: gray;
+  cursor: pointer;
+}
+.head-right:hover {
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: #000;
+  transform: scale(1.05);
+}
+.coll-grid {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 2px;
+  gap: 5px;
+}
+.grid-left {
+  flex: 40%;
+  background-color: #ffffff;
+  padding: 10px;
+}
+.grid-right {
+  flex: 40%;
+  background-color: #ffffff;
+  padding: 10px;
+}
+.left1 {
+  padding: 0;
+}
+
+.grid-left img {
+  cursor: pointer;
+  height: 5vw;
+}
+.grid-right img {
+  cursor: pointer;
+  height: 5vw;
+}
+
+@media screen and (max-width: 768px) {
+  .collection1 {
+    flex: 50%;
+  }
+  .all-collections {
+    flex-wrap: wrap;
+    flex: 1 1 calc(50% - 20px);
+  }
+   .grid-left img {
+    cursor: pointer;
+    height: 15vw;
+  }
+  .grid-right img {
+    cursor: pointer;
+    height: 15vw;
+  }
+}
+</style>
+
+
+ <!-- Top collections section5 -->
+    <div class="page-width top-margin">
+        {% if section.settings.collection_heading != blank %}
+      <h1 class="top-head">{{ section.settings.collection_heading }}</h1>
+        {% endif %}
+      <div class="all-collections">
+        {% for block in section.blocks %}  
+          {% if block.settings.collection1_link != blank %}
+        <div class="collection1">
+          <div class="coll-head">
+            <div class="head-left">
+            <a href="{{ block.settings.collection1_link }}">  <h6>{{ block.settings.collection1_name }}</h6>  </a>
+            </div>
+            <div class="head-right">
+           
+                <a href="{{ block.settings.collection1_viewallink }}">  <h6>{{ block.settings.collection1_viewall }}</h6>  </a>
+            </div>
+          </div>
+          <div class="coll-grid">
+            <div class="grid-left">
+             {% if block.settings.img_1 != blank %}
+       <a href="{{ block.settings.product1_link }}"> <img src="{{ block.settings.img_1 | img_url: 'master' }}" alt="Banner Image"></a>
+         {% endif %}
+            </div>
+            <div class="grid-right">
+    {% if block.settings.img_2 != blank %}
+       <a href="{{ block.settings.product2_link }}">   <img src="{{ block.settings.img_2 | img_url: 'master' }}" alt="Banner Image"></a>
+         {% endif %}   
+            </div>
+          </div>
+          <div class="coll-grid">
+            <div class="grid-left">
+    {% if block.settings.img_3 != blank %}
+  <a href="{{ block.settings.product3_link }}"><img src="{{ block.settings.img_3 | img_url: 'master' }}" alt="Banner Image"></a>
+         {% endif %}     
+            </div>
+            <div class="grid-right">
+         {% if block.settings.img_4 != blank %}
+        <a href="{{ block.settings.product4_link }}">  <img src="{{ block.settings.img_4 | img_url: 'master' }}" alt="Banner Image"></a>
+         {% endif %}
+            </div>
+          </div>
+        </div>
+         {% endif %}   
+    {% endfor %}
+
+        
+      
+      </div>
+    </div>
+
+
+
+{% schema %}
+{
+  "name": "Top Collections",
+  "settings": [
+    {
+      "type": "text",
+      "id": "collection_heading",
+      "label": "Collection Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_block",
+      "name": "Add Text and Image",
+      "settings": [
+        {
+          "type": "url",
+          "id": "collection1_link",
+          "label": "Collection Link"
+        },
+        {
+          "type": "text",
+          "id": "collection1_name",
+          "label": "Collection Name"
+        },
+        {
+          "type": "url",
+          "id": "collection1_viewallink",
+          "label": "View All Collection Link"
+        },
+        {
+          "type": "text",
+          "id": "collection1_viewall",
+          "label": "View All Text"
+        },
+        {
+          "type": "url",
+          "id": "product1_link",
+          "label": "Product 1 Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_1",
+          "label": "Product 1 Image"
+        },
+        {
+          "type": "url",
+          "id": "product2_link",
+          "label": "Product 2 Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_2",
+          "label": "Product 2 Image"
+        },
+        {
+          "type": "url",
+          "id": "product3_link",
+          "label": "Product 3 Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_3",
+          "label": "Product 3 Image"
+        },
+        {
+          "type": "url",
+          "id": "product4_link",
+          "label": "Product 4 Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_4",
+          "label": "Product 4 Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Top Collections"
+     
+    }
+  ]
+}
+{% endschema %}

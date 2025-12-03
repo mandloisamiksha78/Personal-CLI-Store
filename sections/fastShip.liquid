@@ -1,0 +1,159 @@
+
+<style>
+     .pading-main {
+  padding: 0 5rem;
+}
+   .fifty-margin {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+.five-cards {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+  margin: auto;
+}
+.card5-holder {
+  flex: 20%;
+  border-radius: 5.71px;
+  margin: 10px;
+  display: inline-block;
+  text-align: center;
+  padding-top: 25px;
+  background-color: #2b65cf14;
+}
+.card5-holder p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: center;
+  color: gray;
+}
+
+  
+  @media screen and (max-width: 768px) {
+    .five-cards{
+      flex-wrap: wrap;
+    }
+  }
+  
+</style>
+
+
+ <div class="page-width fifty-margin">
+      <div class="five-cards">
+        <div class="card5-holder">
+          {% if section.settings.img_1 != blank %}
+        <img src="{{ section.settings.img_1 | img_url: 'master' }}" alt="card Image">
+         {% endif %}
+            {% if section.settings.card1_heading != blank %}
+          <p>{{ section.settings.card1_heading }}</p>
+              {% endif %}
+              </div>
+
+       
+
+        <div class="card5-holder">
+         {% if section.settings.img_2 != blank %}
+        <img src="{{ section.settings.img_2 | img_url: 'master' }}" alt="card Image">
+         {% endif %}
+            {% if section.settings.card2_heading != blank %}
+          <p>{{ section.settings.card2_heading }}</p>
+              {% endif %}
+        </div>
+
+        <div class="card5-holder">
+         {% if section.settings.img_3 != blank %}
+        <img src="{{ section.settings.img_3 | img_url: 'master' }}" alt="card Image">
+         {% endif %}
+            {% if section.settings.card3_heading != blank %}
+          <p>{{ section.settings.card3_heading }}</p>
+              {% endif %}
+        </div>
+
+        <div class="card5-holder">
+         {% if section.settings.img_4 != blank %}
+        <img src="{{ section.settings.img_4 | img_url: 'master' }}" alt="card Image">
+         {% endif %}
+            {% if section.settings.card4_heading != blank %}
+          <p>{{ section.settings.card1_heading }}</p>
+              {% endif %}
+        </div>
+
+         <div class="card5-holder">
+         {% if section.settings.img_5 != blank %}
+        <img src="{{ section.settings.img_5 | img_url: 'master' }}" alt="card Image">
+         {% endif %}
+            {% if section.settings.card5_heading != blank %}
+          <p>{{ section.settings.card5_heading }}</p>
+              {% endif %}
+        </div>
+      </div>
+    </div>
+
+
+
+
+{% schema %}
+  {
+    "name": "Fast Ship section",
+    "settings": [
+       {
+          "type": "image_picker",
+          "id": "img_1",
+          "label": "Card 1 Image"
+        }, {
+          "type": "text",
+          "id": "card1_heading",
+          "label": "Card heading"
+        },
+       {
+          "type": "image_picker",
+          "id": "img_2",
+          "label": "Card 2 Image"
+        }, {
+          "type": "text",
+          "id": "card2_heading",
+          "label": "Card heading"
+        },
+       {
+          "type": "image_picker",
+          "id": "img_3",
+          "label": "Card 3 Image"
+        }, {
+          "type": "text",
+          "id": "card3_heading",
+          "label": "Card heading"
+        },
+       {
+          "type": "image_picker",
+          "id": "img_4",
+          "label": "Card 4 Image"
+        }, {
+          "type": "text",
+          "id": "card4_heading",
+          "label": "Card heading"
+        },
+       {
+          "type": "image_picker",
+          "id": "img_5",
+          "label": "Card 5 Image"
+        }, {
+          "type": "text",
+          "id": "card5_heading",
+          "label": "Card heading"
+        },
+    ],
+    "presets": [
+    {
+      "name": "Fast Ship section"
+     
+     
+    }
+  ]
+  }
+{% endschema %}
