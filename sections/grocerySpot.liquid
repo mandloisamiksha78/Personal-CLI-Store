@@ -1,0 +1,163 @@
+<style>
+     .fifty-margin {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+  .grocery-container {
+    width: 100%;
+  position: relative;
+  display: inline-block;
+}
+.grocery-img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+.grocery-text {
+  position: absolute;
+  top: 40%;
+  right: 17%;
+  transform: translateY(-50%);
+  color: #2b65cf;
+  text-align: center;
+}
+.grocery-text p,
+.grocery-text h3 {
+  margin: 0;
+}
+.grocery-text p {
+  font-size: 34px;
+  font-weight: 400;
+   color: #2b65cf;
+}
+.grocery-text h3 {
+  font-size: 54px;
+  font-weight: 700;
+   color: #2b65cf;
+}
+.grocery-text button {
+  position: absolute;
+  margin-top: 60px;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  background-color: #2376ef;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+}
+.grocery-text .btn:hover {
+  background-color: #2b65cf;
+}
+.rel_text{
+  position: relative;
+}
+
+  
+@media screen and (max-width: 768px) {
+ .grocery-text {
+    top: 32%;
+    right: 4%;
+    text-align: center;
+  }
+  .grocery-text p {
+    font-size: 24px;
+  }
+  .grocery-text h3 {
+    font-size: 36px;
+  }
+  .grocery-text button {
+    margin-top: 20px;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+    .grocery-text h3 {
+        font-size: 24px;
+        text-align: left;
+    }
+  
+    .grocery-text p {
+        font-size: 16px;
+        text-align: left;
+    }
+
+}
+
+  
+</style>
+
+ <div class="fifty-margin">
+      <div class="grocery-container">
+              {% if section.settings.img_1 != blank %}
+        <img
+         src="{{ section.settings.img_1 | img_url: 'master' }}"
+          class="grocery-img"  alt="Grocery img">
+                     {% endif %}
+        <div class="page-width rel_text">
+        <div class="grocery-text">
+           {% if section.settings.image_heading != blank %}
+          <p>{{ section.settings.image_heading }}</p>
+                  {% endif %}
+          {% if section.settings.image_detail != blank %}
+          <h3>{{ section.settings.image_detail }}</h3>
+            {% endif %}
+          {% if section.settings.btn_url != blank %}
+          <a href="{{ section.settings.btn_url }}">
+          <button class="btn">{{ section.settings.btn_label }}</button>
+            </a>
+              {% endif %}
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Grocery spot",
+    "settings": [
+        {
+          "type": "image_picker",
+          "id": "img_1",
+          "label": "Brand 1 Image"
+        },
+        {
+      "type": "text",
+      "id": "image_heading",
+      "label": "text Heading"
+    },
+       {
+      "type": "richtext",
+      "id": "image_detail",
+      "label": "text detail"
+    },
+       {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Button link"
+    },
+       {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Button label"
+    }
+      
+    ],
+    "presets": [
+    {
+      "name": "Grocery spot"
+     
+     
+    }
+  ]
+  }
+{% endschema %}

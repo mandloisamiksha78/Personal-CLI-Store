@@ -1,0 +1,389 @@
+<style>
+.fifty-margin {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.top-head {
+  text-align: center;
+}
+.testimonial {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testimonial__inner {
+  width: 100%;
+  max-width: 1200px;
+}
+.testimonial-slide {
+  padding: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.testimonial-slide.slick-center {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.testimonial_box {
+  /* opacity: 0.09; */
+  /* border-radius: 15px; */
+  /* padding: 30px; */
+  text-align: center;
+  /* box-shadow: 5px 5px 20px rgba(152, 193, 217, 0.5); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box2 {
+  opacity: unset;
+}
+.testimonial_box-icon {
+  text-align: left;
+  padding: 10px;
+  opacity: 0.09;
+}
+.testimonial_box-text {
+  padding-bottom: 2px;
+  opacity: 0.09;
+}
+.testimonial_box-icon i {
+  font-size: 25px;
+  color: #293e4c;
+  margin-bottom: 15px;
+  text-align: left;
+  rotate: 180deg;
+}
+.blue {
+  background-color: #2b65cf;
+  border-radius: 12px;
+}
+.testimonial_box-text p {
+  color: #293241;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 45px;
+}
+.testimonial_box-img {
+  /* margin-bottom: 15px; */
+  /* margin-top: 33px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testimonial_box-img img {
+  width: 56px;
+  height: 56px;
+  /* border-radius: 50%; */
+  /* border: 3px solid #e5e5e5; */
+}
+.testimonial_box-name h4 {
+  font-size: 13px;
+  font-weight: 400;
+  color: #293241;
+  margin-bottom: 0px;
+  opacity: 0.09;
+}
+.testimonial_box-job p {
+  font-size: 13px;
+  font-weight: 400;
+  color: #293241;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 0;
+  opacity: 0.09;
+}
+.testimonial_box-text .white {
+  color: #ffffff;
+}
+p.white {
+  font-size: 18px;
+  line-height: 25px;
+}
+.blue .testimonial_box-icon {
+  opacity: unset;
+}
+.blue .testimonial_box-text {
+  opacity: unset;
+}
+.testimonial_box-name .nopacity {
+  opacity: unset;
+}
+.testimonial_box-job .nopacity {
+  opacity: unset;
+}
+.timeslide {
+  display: flex;
+  justify-content: center;
+  padding-top: 14px;
+}
+ .box2 .down-div {
+     text-align: center;
+    max-width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 62%;
+    left: 37%;
+  }
+.testimonial-slide.box2 .blue {
+  background-color: #2b65cf;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.testimonial-slide.box2 .nopacity {
+  opacity: 1;
+}
+
+.testimonial-slide .testimonial_box-name h4.noopacity {
+ opacity: unset;
+    color: ##000000;
+}
+
+.testimonial-slide .testimonial_box-job p.noopacity {
+ opacity: unset;
+    color: ##000000;
+}
+
+.testimonial-slide.box2 .white {
+  color: #ffffff;
+}
+.testimonial_box-text p.noopacity{
+ color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 700;
+} 
+.testimonial-slide.slick-center {
+    transform: unset;
+  
+}
+  .testimonial_box-text {
+    width: 100%;
+    max-width: 78%;
+    margin: auto;
+    font-size: 18px;
+  }
+
+    
+  @media screen and (max-width: 768px) {
+
+  .testimonial {
+    padding: 10px;
+    overflow: hidden;
+    flex-direction: column;
+  }
+
+  }
+
+@media (max-width: 480px) {
+
+  .testimonial {
+    padding: 10px;
+  }
+  .testimonial_box {
+    padding: 15px;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+  }
+  .testimonial_box-name h4 {
+    font-size: 16px;
+  }
+  .testimonial_box-job p {
+    font-size: 12px;
+  }
+.testimonial-slide.slick-slide.slick-current.slick-active.slick-center.box2.nopacity{
+  width: 400px !important;
+}
+.testimonial-slide {
+  width: 400px !important;
+}
+.testimonial_box-icon,.testimonial_box-text,.testimonial_box-name h4,.testimonial_box-job p {
+opacity: 1;
+}
+
+}
+
+
+  
+</style>
+
+<div class="page-width fifty-margin">
+   {% if section.settings.section_heading != blank %}
+      <h1 class="top-head"> {{ section.settings.section_heading }}</h1>
+   {% endif %}
+   <div class="testimonial">
+      <div class="container">
+         <div class="testimonial__inner">
+            {% for block in section.blocks %}
+       <div class="testimonial-slide">
+  <div class="testimonial_box">
+    <div class="testimonial_box-inner">
+      <div class="testimonial_box-top">
+        <div class="textimonial_blue">
+        <div class="testimonial_box-icon">
+          <img src="https://cdn.shopify.com/s/files/1/0730/1428/0429/files/Group_4.png?v=1734684250" alt="quote icon">
+        </div>
+        <div class="testimonial_box-text">
+          {% if block.settings.test1_para != blank %}
+          <p>{{ block.settings.test1_para }}</p>
+          {% endif %}
+        </div>
+        </div>
+        
+        <div class="testimonial_box-img">
+          {% if block.settings.img_1 != blank %}
+          <img src="{{ block.settings.img_1 | img_url: 'master' }}" alt="card Image">
+          {% endif %}
+        </div>
+        <div class="testimonial_box-name">
+          {% if block.settings.test1_name != blank %}
+          <h4>{{ block.settings.test1_name }}</h4>
+          {% endif %}
+        </div>
+        <div class="testimonial_box-job">
+          {% if block.settings.test1_post != blank %}
+          <p>{{ block.settings.test1_post }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+            {% endfor %}
+         </div>
+      </div>
+   </div>
+</div>
+
+
+
+
+   <script>
+$(document).ready(function () {
+  let $testimonialInner = $(".testimonial__inner");
+
+  $testimonialInner.slick({
+    autoplay: false,
+    autoplaySpeed: 1000,
+    speed: 200,
+    draggable: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "0px",
+    arrows: false,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+
+ 
+  $testimonialInner.on("afterChange", function (event, slick, currentSlide) {
+    $(".testimonial-slide").removeClass("box2 blue nopacity"); 
+    $(".testimonial_box-name h4").removeClass("noopacity"); 
+    $(".testimonial_box-job p").removeClass("noopacity"); 
+      $(" .testimonial_box-text p").removeClass("noopacity");
+   $(" .testimonial_box-text h4").removeClass("noopacity");
+      $(" .textimonial_blue").removeClass("box2 blue");
+     $(".down-div").remove(); 
+
+    
+   
+    $(".slick-center .textimonial_blue").addClass("box2 blue");
+  $(".slick-center").addClass("box2  nopacity");
+      $(".slick-center .arrow").addClass("down-div");
+  $(".slick-center .testimonial_box-name h4").addClass("noopacity");
+  $(".slick-center .testimonial_box-job p").addClass("noopacity");
+    $(".slick-center .testimonial_box-text p").addClass("noopacity");
+   $(".slick-center .testimonial_box-text h4").addClass("noopacity");
+  //     $(".slick-center .textimonial_blue").append(
+  //   '<div class="down-div arrow"><img src="https://cdn.shopify.com/s/files/1/0730/1428/0429/files/Vector_12_b0d7aae0-5a7d-4808-8b28-fb2cfaace81a.png?v=1734525029" class="down-arrow" alt="profile" /></div>'
+  // );
+   
+  });
+
+  $(".slick-center .textimonial_blue").addClass("box2 blue");
+  $(".slick-center").addClass("box2  nopacity");
+  $(".slick-center .testimonial_box-name h4").addClass("noopacity");
+  $(".slick-center .testimonial_box-job p").addClass("noopacity");
+    $(".slick-center .testimonial_box-text p").addClass("noopacity");
+   $(".slick-center .testimonial_box-text h4").addClass("noopacity");
+    $(".slick-center .textimonial_blue").append(
+    '<div class="down-div arrow"><img src="https://cdn.shopify.com/s/files/1/0730/1428/0429/files/Vector_12_b0d7aae0-5a7d-4808-8b28-fb2cfaace81a.png?v=1734525029" class="down-arrow" alt="profile" /></div>'
+  );
+
+});
+
+    </script>
+
+
+
+
+{% schema %}
+  {
+    "name": "Testimonals section",
+    "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading"
+    },
+    ],
+    "blocks": [
+ {
+      "type": "card_block",
+      "name": "Add Testimonal",
+      "settings": [
+          {
+      "type": "textarea",
+      "id": "test1_para",
+      "label": "Testimaonal text"
+    },
+       {
+          "type": "image_picker",
+          "id": "img_1",
+          "label": "Authore Image"
+        },
+         {
+      "type": "text",
+      "id": "test1_name",
+      "label": "Authore Name"
+    },
+          {
+      "type": "text",
+      "id": "test1_post",
+      "label": "Authore Post"
+    },
+
+          
+        ]
+    }
+  ], 
+    "presets": [
+    {
+      "name": "Testimonals section"
+     
+     
+    }
+  ]
+  }
+{% endschema %}

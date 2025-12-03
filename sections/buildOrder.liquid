@@ -1,0 +1,133 @@
+<style>
+  .fifty-margin {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.full-width{
+   width: 100%;
+   background-color: #8eb6f5;
+}
+.build-div {
+  /* width: 100%; */
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 42px;
+ 
+}
+.build-left {
+  flex: 80%;
+  color: #ffffff;
+  padding: 10px;
+}
+#photo {
+  text-align: justify;
+  /* padding-left: 78px; */
+}
+.build-left img {
+  vertical-align: middle;
+}
+.build-left span {
+  vertical-align: middle;
+}
+.build-right a {
+  color: #ffffff;
+}
+.build-right {
+  flex: 20%;
+  color: #ffffff;
+  align-items: center;
+  text-align: end;
+  padding-top: 19px;
+  /* padding-right: 75px; */
+  cursor: pointer;
+}
+.large-text {
+  font-size: 32px;
+  font-weight: 700;
+  padding-left: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .build-div {
+         flex-wrap: wrap;
+        max-width: 100%;
+        gap: 1px;
+  }
+  #photo {
+    text-align: center;
+    padding-left: 0;
+  }
+  .large-text {
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 5px;
+  }
+
+}
+
+  
+</style>
+
+
+<!-- build your order brand section8 -->
+    <div class="full-width fifty-margin">
+      <div class="page-width">
+        <div class="build-div">
+      <div class="build-left">
+        <div id="photo">
+          <img src="https://cdn.shopify.com/s/files/1/0730/1428/0429/files/Group_3.png?v=1734525028" alt="" >
+            {% if section.settings.build_heading != blank %}
+          <span class="large-text">{{ section.settings.build_heading }}</span>
+                  {% endif %}                                              
+                {% if section.settings.build_text != blank %}
+          <span class="sm-text">{{ section.settings.build_text }}   </span>
+                        {% endif %}
+        </div>
+      </div>
+      <div class="build-right">
+           {% if section.settings.build_link != blank %}
+        <a href="{{ section.settings.build_link }}">{{ section.settings.link_text }}</a>
+                 {% endif %}
+      </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+{% schema %}
+  {
+    "name": "Build order",
+    "settings": [
+  {
+      "type": "text",
+      "id": "build_heading",
+      "label": "Section text"
+    },
+      {
+      "type": "text",
+      "id": "build_text",
+      "label": "Detail text"
+    },
+      {
+      "type": "url",
+      "id": "build_link",
+      "label": "Section link"
+    },
+      {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text"
+    },
+    ],
+    "presets": [
+    {
+      "name": "Build order"
+     
+     
+    }
+  ]
+  }
+{% endschema %}
